@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="755.90601"
+   height="755.90601"
+   viewBox="0 0 200.00013 200.00013"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="NavigationButton.svg"
+   inkscape:export-filename="QuitText.png"
+   inkscape:export-xdpi="50.799965"
+   inkscape:export-ydpi="50.799965"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72604517"
+     inkscape:cx="294.05884"
+     inkscape:cy="402.8675"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g6" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="ReferenceCircle"
+     inkscape:groupmode="layer"
+     id="g1"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <circle
+       style="fill:#000000;stroke-width:0.289838"
+       id="circle2"
+       cx="100"
+       cy="100"
+       r="100"
+       inkscape:label="circle" />
+  </g>
+  <g
+     inkscape:label="TextBlack"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none">
+    <circle
+       style="display:inline;fill:#999999;stroke-width:0.22224"
+       id="circle1"
+       cx="-78.899994"
+       cy="117.36607"
+       r="76.677299"
+       inkscape:label="circle"
+       transform="rotate(-78.911182)" />
+    <circle
+       style="display:inline;fill:#ffffff;stroke:none;stroke-width:0.289838"
+       id="circle4"
+       cx="100"
+       cy="100"
+       r="100"
+       inkscape:label="whiteCircle" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
+       id="text1"
+       inkscape:label="Return to Menu"><textPath
+         xlink:href="#circle1"
+         id="textPath2"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;font-family:Pixellari;-inkscape-font-specification:'Pixellari Medium';fill:#000000;stroke:none;stroke-width:0.264583">Return to Menu      Return to Menu       Return to Menu    Return to Menu</textPath></text>
+  </g>
+  <g
+     inkscape:label="TextWhite"
+     inkscape:groupmode="layer"
+     id="g3"
+     style="display:none">
+    <circle
+       style="display:inline;fill:#999999;stroke-width:0.22224"
+       id="circle3"
+       cx="-78.899994"
+       cy="117.36607"
+       r="76.677299"
+       inkscape:label="circle"
+       transform="rotate(-78.911182)" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       id="text3"
+       inkscape:label="Return to Menu"><textPath
+         xlink:href="#circle1"
+         id="textPath3"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;font-family:Pixellari;-inkscape-font-specification:'Pixellari Medium';fill:#ffffff;stroke:#ffffff;stroke-width:0.264583">Return to Menu      Return to Menu       Return to Menu    Return to Menu</textPath></text>
+  </g>
+  <g
+     inkscape:label="TextWhite_Quit"
+     inkscape:groupmode="layer"
+     id="g6">
+    <circle
+       style="display:none;fill:#999999;stroke-width:0.22224"
+       id="circle5"
+       cx="-78.899994"
+       cy="117.36607"
+       r="76.677299"
+       inkscape:label="circle"
+       transform="rotate(-78.911182)" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
+       id="text6"
+       inkscape:label="Quit"><textPath
+         xlink:href="#circle1"
+         id="textPath6"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;font-family:Pixellari;-inkscape-font-specification:'Pixellari Medium';fill:#ffffff;stroke:none;stroke-width:0.264583">Quit        Quit         Quit          Quit          Quit          Quit          Quit</textPath></text>
+  </g>
+  <g
+     inkscape:label="TextBlack_Quit"
+     inkscape:groupmode="layer"
+     id="g8"
+     style="display:none">
+    <circle
+       style="display:inline;fill:#999999;stroke-width:0.22224"
+       id="circle7"
+       cx="-78.899994"
+       cy="117.36607"
+       r="76.677299"
+       inkscape:label="circle"
+       transform="rotate(-78.911182)" />
+    <circle
+       style="display:inline;fill:#ffffff;stroke:none;stroke-width:0.289838"
+       id="circle8"
+       cx="100"
+       cy="100"
+       r="100"
+       inkscape:label="whiteCircle" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.264583"
+       id="text8"
+       inkscape:label="Quit"><textPath
+         xlink:href="#circle1"
+         id="textPath8"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:14.1111px;font-family:Pixellari;-inkscape-font-specification:'Pixellari Medium';fill:#000000;stroke:none;stroke-width:0.264583">Quit        Quit         Quit          Quit          Quit          Quit          Quit</textPath></text>
+  </g>
+</svg>

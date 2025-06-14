@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: bb19768af7c696343ad4dc9562cc3a71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7760208644190873490
+    second: QuitText_0
+  - first:
+      213: 7906551997618296107
+    second: QuitText_1
+  - first:
+      213: 7340910563435292725
+    second: QuitText_2
+  - first:
+      213: 6914646120771605548
+    second: QuitText_3
+  - first:
+      213: 8254739339728048010
+    second: QuitText_4
+  - first:
+      213: -8895891032219003150
+    second: QuitText_5
+  - first:
+      213: -5379752949481405170
+    second: QuitText_6
+  - first:
+      213: 7055402314603599197
+    second: QuitText_7
+  - first:
+      213: 7658682731570390809
+    second: QuitText_8
+  - first:
+      213: 3149729891446386957
+    second: QuitText_9
+  - first:
+      213: 4196750680237342092
+    second: QuitText_10
+  - first:
+      213: -5933510204026772525
+    second: QuitText_11
+  - first:
+      213: -1493705395996164702
+    second: QuitText_12
+  - first:
+      213: 6487920946769568498
+    second: QuitText_13
+  - first:
+      213: 304342909311483485
+    second: QuitText_14
+  - first:
+      213: -4743854957305778413
+    second: QuitText_15
+  - first:
+      213: -8510864579888417257
+    second: QuitText_16
+  - first:
+      213: -5434629091096440553
+    second: QuitText_17
+  - first:
+      213: 2152098068479581705
+    second: QuitText_18
+  - first:
+      213: -2414270351944019168
+    second: QuitText_19
+  - first:
+      213: -1671379312337086950
+    second: QuitText_20
+  - first:
+      213: -8906733938644300969
+    second: QuitText_21
+  - first:
+      213: 2546477100499589369
+    second: QuitText_22
+  - first:
+      213: 3413755073660272148
+    second: QuitText_23
+  - first:
+      213: 8901066259993154425
+    second: QuitText_24
+  - first:
+      213: -4915630707080606587
+    second: QuitText_25
+  - first:
+      213: -1757186245220266238
+    second: QuitText_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuitText_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 328
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297a9e385acc1bb60800000000000000
+      internalID: 7760208644190873490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 344
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b259130b627b9bd60800000000000000
+      internalID: 7906551997618296107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_2
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 339
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538297d734720e560800000000000000
+      internalID: 7340910563435292725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_3
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 336
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24df10f202c5ff50800000000000000
+      internalID: 6914646120771605548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 332
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fcee9a1b9be8270800000000000000
+      internalID: 8254739339728048010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 308
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6d0081d327b8480800000000000000
+      internalID: -8895891032219003150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 321
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e050dc212374755b0800000000000000
+      internalID: -5379752949481405170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 266
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d559a652603d9e160800000000000000
+      internalID: 7055402314603599197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_8
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 253
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917ebaeed5b194a60800000000000000
+      internalID: 7658682731570390809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_9
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 247
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d017716f5a616bb20800000000000000
+      internalID: 3149729891446386957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_10
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 238
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8dfc62228add3a30800000000000000
+      internalID: 4196750680237342092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_11
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 220
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d324d118efe7ada0800000000000000
+      internalID: -5933510204026772525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_12
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 215
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad70983bda454be0800000000000000
+      internalID: -1493705395996164702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 213
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f224030ab9b90a50800000000000000
+      internalID: 6487920946769568498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 199
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e7b67734e393400800000000000000
+      internalID: 304342909311483485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 178
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f20d3ec017a2eb0800000000000000
+      internalID: -4743854957305778413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_16
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 121
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716fb40d1c553e980800000000000000
+      internalID: -8510864579888417257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 135
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7115133b2a15494b0800000000000000
+      internalID: -5434629091096440553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_18
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 104
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e978d7ac9cddd10800000000000000
+      internalID: 2152098068479581705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_19
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 111
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0239e9008e9ce7ed0800000000000000
+      internalID: -2414270351944019168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_20
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 73
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16163bee511ec8e0800000000000000
+      internalID: -1671379312337086950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_21
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 67
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bc0363cace46480800000000000000
+      internalID: -8906733938644300969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_22
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 51
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8d1fb5e67e65320800000000000000
+      internalID: 2546477100499589369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 26
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e35b31728106f20800000000000000
+      internalID: 3413755073660272148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_24
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 27
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9735b158a90f68b70800000000000000
+      internalID: 8901066259993154425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_25
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 34
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c45718aeb28cbb0800000000000000
+      internalID: -4915630707080606587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitText_26
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 33
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f81718b683d97e0800000000000000
+      internalID: -1757186245220266238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      QuitText_0: 7760208644190873490
+      QuitText_1: 7906551997618296107
+      QuitText_10: 4196750680237342092
+      QuitText_11: -5933510204026772525
+      QuitText_12: -1493705395996164702
+      QuitText_13: 6487920946769568498
+      QuitText_14: 304342909311483485
+      QuitText_15: -4743854957305778413
+      QuitText_16: -8510864579888417257
+      QuitText_17: -5434629091096440553
+      QuitText_18: 2152098068479581705
+      QuitText_19: -2414270351944019168
+      QuitText_2: 7340910563435292725
+      QuitText_20: -1671379312337086950
+      QuitText_21: -8906733938644300969
+      QuitText_22: 2546477100499589369
+      QuitText_23: 3413755073660272148
+      QuitText_24: 8901066259993154425
+      QuitText_25: -4915630707080606587
+      QuitText_26: -1757186245220266238
+      QuitText_3: 6914646120771605548
+      QuitText_4: 8254739339728048010
+      QuitText_5: -8895891032219003150
+      QuitText_6: -5379752949481405170
+      QuitText_7: 7055402314603599197
+      QuitText_8: 7658682731570390809
+      QuitText_9: 3149729891446386957
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

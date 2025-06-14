@@ -1,12 +1,16 @@
+using System;
+using Labyrinth.Eventsystem;
 using NUnit.Framework;
 using UnityEngine;
 
 namespace Labyrinth.Character {
-    public class CharacterController : MonoBehaviour {
+    public class CharacterMover : MonoBehaviour {
         [SerializeField]
         InputManager inputManager;
         [SerializeField]
         Rigidbody2D attachedRigidbody;
+        [SerializeField]
+        string goalLayer = "Goal";
 
 
         [SerializeField, UnityEngine.Range(0, 10)]
@@ -80,12 +84,22 @@ namespace Labyrinth.Character {
         }
 
         protected void OnTriggerEnter2D(Collider2D collision) {
-            float distance = attachedRigidbody.Distance(collision).distance;
-            // Remove overlap (stop at wall)
-            transform.position += new Vector3(0, distance, 0);
-            // Bounce back
-            currentSpeed *= -1;
-            Move();
+            if (collision.gameObject.CompareTag(goalLayer)) {
+                GameStateEventManager.InvokeGoalReached();
+            } else {
+                float distance = attachedRigidbody.Distance(collision).distance;
+                // Remove overlap (stop at wall)
+                transform.position += new Vector3(0, distance, 0);
+                // Bounce back
+                currentSpeed *= -1;
+                Move();
+            }
+        }
+
+        public void ResetPlayerPosition(Vector2 startPos) {
+            currentRotateSpeed = 0;
+            currentSpeed = 0;
+            transform.SetPositionAndRotation(startPos, Quaternion.identity);
         }
     }
 }
