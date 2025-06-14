@@ -1,4 +1,3 @@
-using System;
 using Labyrinth.Eventsystem;
 using NUnit.Framework;
 using UnityEngine;
@@ -11,6 +10,8 @@ namespace Labyrinth.Character {
         Rigidbody2D attachedRigidbody;
         [SerializeField]
         string goalLayer = "Goal";
+        [SerializeField]
+        string dangerLayer = "Danger";
 
 
         [SerializeField, UnityEngine.Range(0, 10)]
@@ -33,6 +34,10 @@ namespace Labyrinth.Character {
         [SerializeField]
         float currentRotateSpeed = 0;
 
+
+        Vector2 lastStartPos;
+        Vector2 lastStartRotation;
+
         protected void OnValidate() {
             if (!attachedRigidbody) {
                 TryGetComponent(out attachedRigidbody);
@@ -49,6 +54,22 @@ namespace Labyrinth.Character {
             TryStopping();
             TryTurning();
             TryMoving();
+        }
+
+        protected void OnTriggerEnter2D(Collider2D collision) {
+            if (collision.gameObject.CompareTag(goalLayer)) { // Collision with goal
+                GameStateEventManager.InvokeGoalReached();
+            } else if (collision.gameObject.CompareTag(dangerLayer)) { // Collision with danger
+                Debug.Log("Danger!");
+                ResetPlayerPosition(lastStartPos, lastStartRotation);
+            } else {    // Collision with walls
+                float distance = attachedRigidbody.Distance(collision).distance;
+                // Remove overlap (stop at wall)
+                transform.position += new Vector3(0, distance, 0);
+                // Bounce back
+                currentSpeed *= -1;
+                Move();
+            }
         }
         void TryStopping() {
             if (inputManager.isStopping && !inputManager.isTurning) {
@@ -83,23 +104,13 @@ namespace Labyrinth.Character {
             transform.Translate(currentSpeed * Time.deltaTime * transform.up, Space.World);
         }
 
-        protected void OnTriggerEnter2D(Collider2D collision) {
-            if (collision.gameObject.CompareTag(goalLayer)) {
-                GameStateEventManager.InvokeGoalReached();
-            } else {
-                float distance = attachedRigidbody.Distance(collision).distance;
-                // Remove overlap (stop at wall)
-                transform.position += new Vector3(0, distance, 0);
-                // Bounce back
-                currentSpeed *= -1;
-                Move();
-            }
-        }
-
-        public void ResetPlayerPosition(Vector2 startPos) {
+        public void ResetPlayerPosition(Vector2 startPos, Vector2 lookAt) {
+            lastStartPos = startPos;
+            lastStartRotation = lookAt;
             currentRotateSpeed = 0;
             currentSpeed = 0;
-            transform.SetPositionAndRotation(startPos, Quaternion.identity);
+            var rotation = Quaternion.LookRotation(Vector3.forward,lookAt);
+            transform.SetPositionAndRotation(startPos, rotation);
         }
     }
 }

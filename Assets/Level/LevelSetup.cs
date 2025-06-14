@@ -11,6 +11,8 @@ namespace Labyrinth.Level {
 
         [SerializeField]
         Transform playerStart;
+        [SerializeField]
+        public Vector2 playerStartRotation;
 
         public Vector2 playerStartPos => playerStart.position;
 

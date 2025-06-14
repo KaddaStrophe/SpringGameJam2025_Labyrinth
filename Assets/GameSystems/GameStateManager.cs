@@ -37,7 +37,7 @@ namespace Labyrinth.GameSystem {
             levels = new LevelSetup[levelContainer.transform.childCount];
             int i = 0;
             foreach (Transform child in levelContainer.transform) {
-                if (child.TryGetComponent<LevelSetup>(out var level)) {
+                if (child.gameObject.activeSelf && child.TryGetComponent<LevelSetup>(out var level)) {
                     levels[i] = level;
                     i++;
                 }
@@ -62,7 +62,7 @@ namespace Labyrinth.GameSystem {
             if (currentLevel < levels.Length - 1) {
                 currentLevel++;
                 var level = levels[currentLevel];
-                player.ResetPlayerPosition(level.playerStartPos);
+                player.ResetPlayerPosition(level.playerStartPos, level.playerStartRotation);
                 level.StartLevel();
             } else {
                 WinGame();
