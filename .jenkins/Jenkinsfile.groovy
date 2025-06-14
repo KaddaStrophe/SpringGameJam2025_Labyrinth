@@ -55,8 +55,8 @@ pipeline {
 							STEAM_CREDENTIALS : '',
 
 							// configuration for deploying to itch
-							ITCH_ID : '',
-							ITCH_CREDENTIALS : '',
+							ITCH_ID : 'stumbleduck/labyrinth',
+							ITCH_CREDENTIALS : 'Petrichora-itch.io',
 
 							// configuration for deploying to Discord
 							REPORT_TO_DISCORD : '0',
