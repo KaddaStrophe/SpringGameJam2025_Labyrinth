@@ -1,11 +1,17 @@
+using System;
 using Labyrinth.Eventsystem;
+using Labyrinth.GameSystem;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Labyrinth.Character {
     public class CharacterMover : MonoBehaviour {
         [SerializeField]
         InputManager inputManager;
+
+        [SerializeField]
+        GameStateManager gameStateManager;
         [SerializeField]
         Rigidbody2D attachedRigidbody;
         [SerializeField]
@@ -38,6 +44,8 @@ namespace Labyrinth.Character {
         Vector2 lastStartPos;
         Vector2 lastStartRotation;
 
+        bool canMove = true;
+
         protected void OnValidate() {
             if (!attachedRigidbody) {
                 TryGetComponent(out attachedRigidbody);
@@ -60,8 +68,16 @@ namespace Labyrinth.Character {
             if (collision.gameObject.CompareTag(goalLayer)) { // Collision with goal
                 GameStateEventManager.InvokeGoalReached();
             } else if (collision.gameObject.CompareTag(dangerLayer)) { // Collision with danger
-                Debug.Log("Danger!");
-                ResetPlayerPosition(lastStartPos, lastStartRotation);
+                // TODO: Screenshake
+                if(gameStateManager.isPermaDeath) {
+                    canMove = false;
+                    currentSpeed = 0;
+                    currentRotateSpeed = 0;
+                    gameStateManager.StartGameOver();
+                    transform.gameObject.SetActive(false);
+                } else {
+                    ResetPlayerPosition(lastStartPos, lastStartRotation);
+                }
             } else {    // Collision with walls
                 float distance = attachedRigidbody.Distance(collision).distance;
                 // Remove overlap (stop at wall)
@@ -71,7 +87,11 @@ namespace Labyrinth.Character {
                 Move();
             }
         }
+
         void TryStopping() {
+            if (!canMove) {
+                return;
+            }
             if (inputManager.isStopping && !inputManager.isTurning) {
                 currentSpeed -= deceleration * Time.deltaTime;
                 currentSpeed = Mathf.Max(currentSpeed, 0f); // limit to zero
@@ -79,6 +99,9 @@ namespace Labyrinth.Character {
             }
         }
         void TryTurning() {
+            if (!canMove) {
+                return;
+            }
             if (inputManager.isTurning) {
                 currentRotateSpeed += rotateAcceleration * Time.deltaTime;
                 currentRotateSpeed = Mathf.Min(currentRotateSpeed, fullRotateSpeed); // limit to full speed
@@ -87,6 +110,9 @@ namespace Labyrinth.Character {
         }
 
         void TryMoving() {
+            if(!canMove) {
+                return;
+            }
             if (!inputManager.isTurning && !inputManager.isStopping) {
                 // Decelerate rotation
                 currentRotateSpeed -= rotateDeceleration * Time.deltaTime;
@@ -101,6 +127,9 @@ namespace Labyrinth.Character {
         }
 
         void Move() {
+            if (!canMove) {
+                return;
+            }
             transform.Translate(currentSpeed * Time.deltaTime * transform.up, Space.World);
         }
 
@@ -109,7 +138,7 @@ namespace Labyrinth.Character {
             lastStartRotation = lookAt;
             currentRotateSpeed = 0;
             currentSpeed = 0;
-            var rotation = Quaternion.LookRotation(Vector3.forward,lookAt);
+            var rotation = Quaternion.LookRotation(Vector3.forward, lookAt);
             transform.SetPositionAndRotation(startPos, rotation);
         }
     }

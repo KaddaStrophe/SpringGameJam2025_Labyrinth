@@ -1,6 +1,7 @@
 using System.Collections;
 using Labyrinth.Eventsystem;
 using Labyrinth.GameSystems.UI;
+using Labyrinth.Level;
 using UnityEngine;
 
 namespace Labyrinth.GameSystem {
@@ -10,36 +11,44 @@ namespace Labyrinth.GameSystem {
         Canvas levelFinishedCanvas;
         [SerializeField]
         Canvas winCanvas;
+        [SerializeField]
+        Canvas gameOverCanvas;
         [SerializeField, UnityEngine.Range(0, 10)]
         float levelFinishScreenDuration = 5;
         [SerializeField, UnityEngine.Range(0, 10)]
-        float gameWinScreenDuration = 5;
+        float waitForMenuButtonDuration = 3;
 
         [SerializeField]
-        MenuButton menuButton;
+        MenuButton winMenuButton;
+        [SerializeField]
+        MenuButton gameOverMenuButton;
 
         bool alreadyFinishedLevel;
         bool alreadyFinishedGame;
+        bool alreadyGameOver;
 
         protected void OnEnable() {
             GameStateEventManager.onGoalReached += LevelFinish;
             GameStateEventManager.onGameWon += ShowGameWin;
+            GameStateEventManager.onGameOver += GameOver;
         }
 
         protected void OnDisable() {
             GameStateEventManager.onGoalReached -= LevelFinish;
             GameStateEventManager.onGameWon -= ShowGameWin;
+            GameStateEventManager.onGameOver -= GameOver;
         }
 
         protected void Start() {
             levelFinishedCanvas.gameObject.SetActive(false);
             winCanvas.gameObject.SetActive(false);
-            menuButton.gameObject.SetActive(false);
+            winMenuButton.gameObject.SetActive(false);
+            gameOverMenuButton.gameObject.SetActive(false);
         }
 
         void LevelFinish() {
             // Show level finish UI
-            if (!alreadyFinishedLevel) {
+            if (!alreadyFinishedLevel && !alreadyGameOver) {
                 alreadyFinishedLevel = true;
                 StartCoroutine(ShowLevelFinishScreenForSeconds(levelFinishScreenDuration));
             }
@@ -55,19 +64,33 @@ namespace Labyrinth.GameSystem {
             alreadyFinishedLevel = false;
         }
 
-        void ShowGameWin() {
+        void ShowGameWin(LevelSetup level) {
             if (!alreadyFinishedGame) {
                 alreadyFinishedGame = true;
-                StartCoroutine(ShowGameWinScreen(gameWinScreenDuration));
+                StartCoroutine(ShowGameScreen(waitForMenuButtonDuration));
             }
         }
 
-        IEnumerator ShowGameWinScreen(float gameWinScreenDuration) {
+        void GameOver(LevelSetup level) {
+            alreadyGameOver = true;
+            StartCoroutine(ShowGameOverScreen(level, waitForMenuButtonDuration));
+        }
+
+        IEnumerator ShowGameScreen(float gameWinScreenDuration) {
             winCanvas.gameObject.SetActive(true);
             yield return new WaitForSeconds(gameWinScreenDuration);
 
             // Show button for restart or main menu
-            menuButton.gameObject.SetActive(true);
+            winMenuButton.gameObject.SetActive(true);
+        }
+        IEnumerator ShowGameOverScreen(LevelSetup level, float gameWinScreenDuration) {
+            yield return new WaitForSeconds(1);
+            level.HideLevel();
+            gameOverCanvas.gameObject.SetActive(true);
+            yield return new WaitForSeconds(gameWinScreenDuration);
+
+            // Show button for restart or main menu
+            gameOverMenuButton.gameObject.SetActive(true);
         }
     }
 }

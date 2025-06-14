@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 4446699201227937861}
   quitButton: {fileID: 35114013399808567}
+  ringProgressSpeed: 0.8
   OnHoldPerformed:
     m_PersistentCalls:
       m_Calls:

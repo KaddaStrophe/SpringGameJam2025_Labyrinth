@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Labyrinth.Character;
 using Labyrinth.Eventsystem;
@@ -7,13 +9,16 @@ using UnityEngine;
 namespace Labyrinth.GameSystem {
     public class GameStateManager : MonoBehaviour {
         [SerializeField]
+        public bool isPermaDeath;
+
+        [SerializeField]
         GameObject levelContainer;
 
         [SerializeField]
         CharacterMover player;
 
         [SerializeField]
-        UIManager uiManager;
+        ParticleSystem winParticles;
 
         [Header("Debug")]
         [SerializeField]
@@ -34,13 +39,18 @@ namespace Labyrinth.GameSystem {
                 player = FindObjectsByType<CharacterMover>(FindObjectsSortMode.None).FirstOrDefault();
             }
 
-            levels = new LevelSetup[levelContainer.transform.childCount];
             int i = 0;
+            var levelsList = new List<LevelSetup>();
             foreach (Transform child in levelContainer.transform) {
                 if (child.gameObject.activeSelf && child.TryGetComponent<LevelSetup>(out var level)) {
-                    levels[i] = level;
+                    levelsList.Add(level);
                     i++;
                 }
+            }
+            levels = new LevelSetup[i];
+            int j = 0;
+            foreach (var level in levelsList) {
+                levels[j] = level;
             }
         }
 
@@ -49,12 +59,12 @@ namespace Labyrinth.GameSystem {
         }
 
         protected void Start() {
-            foreach (Transform child in levelContainer.transform) {
-                if (child.TryGetComponent<LevelSetup>(out var level)) {
-                    level.HideLevel();
-                }
+            foreach (var level in levels) {
+                level.HideLevel();
             }
-            levels[currentLevel].StartLevel();
+            var firstLevel = levels[currentLevel];
+            player.ResetPlayerPosition(firstLevel.playerStartPos, firstLevel.playerStartRotation);
+            firstLevel.StartLevel();
         }
 
         void LoadNextLevel() {
@@ -70,7 +80,12 @@ namespace Labyrinth.GameSystem {
         }
 
         void WinGame() {
-            GameStateEventManager.InvokeGameWon();
+            GameStateEventManager.InvokeGameWon(levels[currentLevel]);
+            winParticles.Play();
+        }
+
+        internal void StartGameOver() {
+            GameStateEventManager.InvokeGameOver(levels[currentLevel]);
         }
     }
 }

@@ -1,3 +1,4 @@
+using Labyrinth.Level;
 using UnityEngine;
 
 namespace Labyrinth.Eventsystem {
@@ -16,11 +17,18 @@ namespace Labyrinth.Eventsystem {
             onStartNextLevel?.Invoke();
         }
 
-        public delegate void GameWonHandler();
+        public delegate void GameWonHandler(LevelSetup level);
         public static event GameWonHandler onGameWon;
 
-        public static void InvokeGameWon() {
-            onGameWon?.Invoke();
+        public static void InvokeGameWon(LevelSetup level) {
+            onGameWon?.Invoke(level);
+        }
+
+        public delegate void GameOverHandler(LevelSetup level);
+        public static event GameOverHandler onGameOver;
+
+        public static void InvokeGameOver(LevelSetup level) {
+            onGameOver?.Invoke(level);
         }
     }
 }

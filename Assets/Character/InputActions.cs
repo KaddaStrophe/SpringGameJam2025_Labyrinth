@@ -200,7 +200,7 @@ namespace Labyrinth.Character
                     ""id"": ""845642ef-5ee4-43d6-b78e-4d101d0df324"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Hold(duration=0.5)"",
+                    ""interactions"": ""Hold(duration=0.3)"",
                     ""initialStateCheck"": false
                 }
             ],
