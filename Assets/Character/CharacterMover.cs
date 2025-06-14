@@ -1,8 +1,6 @@
-using System;
 using Labyrinth.Eventsystem;
 using Labyrinth.GameSystem;
 using NUnit.Framework;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Labyrinth.Character {
@@ -51,6 +49,10 @@ namespace Labyrinth.Character {
                 TryGetComponent(out attachedRigidbody);
             }
         }
+        protected void OnEnable() {
+            transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+        }
+
         protected void Start() {
             if (!inputManager) {
                 TryGetComponent(out inputManager);
@@ -69,23 +71,31 @@ namespace Labyrinth.Character {
                 GameStateEventManager.InvokeGoalReached();
             } else if (collision.gameObject.CompareTag(dangerLayer)) { // Collision with danger
                 // TODO: Screenshake
-                if(gameStateManager.isPermaDeath) {
+                if (gameStateManager.isPermaDeath) {
                     canMove = false;
                     currentSpeed = 0;
                     currentRotateSpeed = 0;
                     gameStateManager.StartGameOver();
-                    transform.gameObject.SetActive(false);
+                    transform.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 } else {
                     ResetPlayerPosition(lastStartPos, lastStartRotation);
                 }
             } else {    // Collision with walls
-                float distance = attachedRigidbody.Distance(collision).distance;
-                // Remove overlap (stop at wall)
-                transform.position += new Vector3(0, distance, 0);
+                ProcessCollisionWithWalls(collision);
                 // Bounce back
                 currentSpeed *= -1;
                 Move();
             }
+        }
+
+        protected void OnTriggerStay2D(Collider2D collision) {
+            ProcessCollisionWithWalls(collision);
+        }
+
+        void ProcessCollisionWithWalls(Collider2D collision) {
+            var distance = attachedRigidbody.Distance(collision);
+            // Remove overlap (stop at wall)
+            transform.position += new Vector3(distance.normal.x, distance.normal.y, 0) * distance.distance;
         }
 
         void TryStopping() {
@@ -106,11 +116,16 @@ namespace Labyrinth.Character {
                 currentRotateSpeed += rotateAcceleration * Time.deltaTime;
                 currentRotateSpeed = Mathf.Min(currentRotateSpeed, fullRotateSpeed); // limit to full speed
                 transform.Rotate(transform.forward, currentRotateSpeed * 100 * Time.deltaTime, Space.Self);
+
+                // Decelerate forward movement
+                currentSpeed -= deceleration * Time.deltaTime;
+                currentSpeed = Mathf.Max(currentSpeed, 0f); // limit to zero
+                Move();
             }
         }
 
         void TryMoving() {
-            if(!canMove) {
+            if (!canMove) {
                 return;
             }
             if (!inputManager.isTurning && !inputManager.isStopping) {

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Labyrinth.Character;
@@ -51,6 +50,7 @@ namespace Labyrinth.GameSystem {
             int j = 0;
             foreach (var level in levelsList) {
                 levels[j] = level;
+                j++;
             }
         }
 
