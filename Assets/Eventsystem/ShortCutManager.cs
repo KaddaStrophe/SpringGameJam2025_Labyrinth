@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 namespace Labyrinth.Eventsystem {
     public class ShortCutManager : MonoBehaviour {
         [SerializeField]
+        bool activateHotkeys = true;
+        [SerializeField]
         LevelSetup f1Skip;
         [SerializeField]
         LevelSetup f2Skip;
@@ -21,7 +23,9 @@ namespace Labyrinth.Eventsystem {
             inputActions.Hotkey.Skip_3.canceled += SkipToThirdLevel;
             inputActions.Hotkey.Permadeath.canceled += TogglePermadeath;
             inputActions.Hotkey.MainMenu.canceled += LoadMainMenu;
-            inputActions.Enable();
+            if (activateHotkeys) {
+                inputActions.Enable();
+            }
         }
 
         protected void OnDisable() {
