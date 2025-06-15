@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: d4d8e2c212f78354b821d7826f858f66, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: d4d8e2c212f78354b821d7826f858f66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14713,7 +14713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: 8703d1fad9945cd45b95ae9b8c54cf6d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: 8703d1fad9945cd45b95ae9b8c54cf6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14737,6 +14737,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5787082748737948678, guid: 8703d1fad9945cd45b95ae9b8c54cf6d, type: 3}
   m_PrefabInstance: {fileID: 352563359}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &359842543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom(Clone)
+  m_EditorClassIdentifier: 
+  active: 0
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+  threshold:
+    m_OverrideState: 0
+    m_Value: 0.9
+  intensity:
+    m_OverrideState: 1
+    m_Value: 3
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 1
+    m_Value: {r: 0.3383211, g: 0.20038268, b: 0.745283, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  downscale:
+    m_OverrideState: 0
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!1001 &416884463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17551,7 +17598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: 6398e8c5fe3bdf245b4f661075b164ad, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: 6398e8c5fe3bdf245b4f661075b164ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23238,7 +23285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: 4eb6315bfe1adcb47b1f0f2484d2c467, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: 4eb6315bfe1adcb47b1f0f2484d2c467, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23505,7 +23552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: 4f531eaf34ea20b4e9361ac75cfcb9b0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: 4f531eaf34ea20b4e9361ac75cfcb9b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23551,7 +23598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: 3935ddefc1b72ab4196a181971483ed2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: 3935ddefc1b72ab4196a181971483ed2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23858,7 +23905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useBloom: 0
   volume: {fileID: 1241376511}
-  bloom: {fileID: 0}
+  bloom: {fileID: 359842543}
 --- !u!1001 &1508976127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37927,7 +37974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5472102737874954276, guid: 1ce53e5db35bce544b50d5b7009457c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5787082748737948678, guid: 1ce53e5db35bce544b50d5b7009457c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
