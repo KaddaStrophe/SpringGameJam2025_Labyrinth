@@ -1,6 +1,6 @@
 using Labyrinth.Character;
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;

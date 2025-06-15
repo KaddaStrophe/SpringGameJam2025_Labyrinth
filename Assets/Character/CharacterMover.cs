@@ -1,7 +1,7 @@
 using Labyrinth.Eventsystem;
 using Labyrinth.GameSystem;
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Labyrinth.Character {
     public class CharacterMover : MonoBehaviour {
@@ -57,7 +57,7 @@ namespace Labyrinth.Character {
             if (!inputManager) {
                 TryGetComponent(out inputManager);
             }
-            Assert.True(inputManager);
+            Assert.IsTrue(inputManager);
         }
 
         protected void FixedUpdate() {

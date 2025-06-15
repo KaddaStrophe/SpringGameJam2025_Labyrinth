@@ -1,5 +1,5 @@
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.Tilemaps;
 
 namespace Labyrinth.Level {
@@ -25,7 +25,7 @@ namespace Labyrinth.Level {
                     }
                 }
             }
-            Assert.True(playerStart, "Player Start is missing!");
+            Assert.IsTrue(playerStart, "Player Start is missing!");
         }
 
         protected void OnEnable() {
