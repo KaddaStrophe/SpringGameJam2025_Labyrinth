@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -10,12 +11,15 @@ public class OutfitManager : MonoBehaviour {
 
     bool bloomBefore;
     VolumeProfile volumeProfile;
+    [SerializeField]
+    Bloom bloom;
 
     protected void OnValidate() {
         if (useBloom != bloomBefore) {
             SetBloom(useBloom);
         }
         volumeProfile = volume.profile;
+        volumeProfile.TryGet(out bloom);
     }
 
     protected void Start() {
@@ -30,7 +34,20 @@ public class OutfitManager : MonoBehaviour {
 
     void SetBloom(bool isActive) {
         bloomBefore = useBloom;
-        var bloom = volumeProfile.components.Find(v => v is Bloom);
         bloom.active = isActive;
+        if (useBloom) {
+            //StartCoroutine(CirculateColor());
+        }
+    }
+
+    IEnumerator CirculateColor() {
+        Color.RGBToHSV((Color)bloom.tint, out float h, out float s, out float v);
+        while (useBloom) {
+            h += Time.deltaTime * .1f;
+            h = h > 100 ? 0 : h;
+            bloom.tint.Override(Color.HSVToRGB(h, s, v));
+            
+            yield return null;
+        }
     }
 }
