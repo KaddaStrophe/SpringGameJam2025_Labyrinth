@@ -30,5 +30,11 @@ namespace Labyrinth.Eventsystem {
         public static void InvokeGameOver(LevelSetup level) {
             onGameOver?.Invoke(level);
         }
+
+        public delegate void HitDangerHandler();
+        public static event HitDangerHandler onHitDanger;
+        public static void InvokeHitDanger() {
+            onHitDanger?.Invoke();
+        }
     }
 }

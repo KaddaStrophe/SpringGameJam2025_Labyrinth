@@ -8,6 +8,10 @@ using UnityEngine.UI;
 namespace Labyrinth.GameSystems.UI {
     public class MenuButton : MonoBehaviour {
         [SerializeField]
+        AudioSource audioSource;
+        [SerializeField]
+        AudioClip buttonPressClip;
+        [SerializeField]
         Transform startButton;
         [SerializeField]
         Transform quitButton;
@@ -52,6 +56,7 @@ namespace Labyrinth.GameSystems.UI {
         void ProcessPressCancel(InputAction.CallbackContext context) {
             if (!isHolding) {
                 OnClickPerformed?.Invoke();
+                audioSource.PlayOneShot(buttonPressClip);
             } else {
                 isHolding = false;
             }
@@ -70,6 +75,7 @@ namespace Labyrinth.GameSystems.UI {
             // If progress ring is full -> perform holding complete event
             if (quitButtonImage.fillAmount == 1) {
                 OnHoldPerformed?.Invoke();
+                audioSource.PlayOneShot(buttonPressClip);
             }
         }
     }

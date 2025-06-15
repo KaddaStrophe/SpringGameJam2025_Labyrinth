@@ -70,7 +70,8 @@ namespace Labyrinth.Character {
             if (collision.gameObject.CompareTag(goalLayer)) { // Collision with goal
                 GameStateEventManager.InvokeGoalReached();
             } else if (collision.gameObject.CompareTag(dangerLayer)) { // Collision with danger
-                // TODO: Screenshake
+                GameStateEventManager.InvokeHitDanger();
+                CameraEventManager.InvokeImpact();
                 if (gameStateManager.isPermaDeath) {
                     canMove = false;
                     currentSpeed = 0;
@@ -82,7 +83,7 @@ namespace Labyrinth.Character {
                 }
             } else {    // Collision with walls
                 ProcessCollisionWithWalls(collision);
-                
+                CameraEventManager.InvokeImpact();
             }
         }
 
