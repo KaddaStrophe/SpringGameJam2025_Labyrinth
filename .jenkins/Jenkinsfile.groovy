@@ -29,22 +29,22 @@ pipeline {
 							BUILD_DOCUMENTATION : '0',
 
 							// automatically run Unity Test Runner
-							TEST_UNITY : '1',
+							TEST_UNITY : '0',
 
 							// automatically run dotnet format
 							TEST_FORMATTING : '0',
 							FORMATTING_EXCLUDE : 'Library Assets/Plugins Packages',
 
 							// which executables to create
-							BUILD_FOR_WINDOWS : '0',
+							BUILD_FOR_WINDOWS : '1',
 							BUILD_FOR_LINUX : '0',
 							BUILD_FOR_MAC : '0',
 							BUILD_FOR_WEBGL : '1',
-							BUILD_FOR_ANDROID : '0',
+							BUILD_FOR_ANDROID : '1',
 
 							// which platforms to deploy to
 							DEPLOY_TO_STEAM : '0',
-							DEPLOY_TO_ITCH : '0',
+							DEPLOY_TO_ITCH : '1',
 							DEPLOY_ON_FAILURE : '1',
 
 							// configration for deploying to steam
