@@ -87,6 +87,7 @@ namespace Labyrinth.GameSystem {
             yield return new WaitForSeconds(1);
             level.HideLevel();
             gameOverCanvas.gameObject.SetActive(true);
+            GameStateEventManager.InvokeShowGameOverScreen();
             yield return new WaitForSeconds(gameWinScreenDuration);
 
             // Show button for restart or main menu

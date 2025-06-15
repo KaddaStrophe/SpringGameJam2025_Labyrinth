@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4f4907dd44356054c9f3a100f74789d4
+guid: 34fe81383be9d5142aa3cc17b99dcd07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4496153294741504277
-    second: QuitProgressCircle_0
+      213: -9109670133777274628
+    second: S_Logo_StumbleDuck_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: QuitProgressCircle_0
+      name: S_Logo_StumbleDuck_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 400
-        height: 400
+        width: 72
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51105c4999b856e30800000000000000
-      internalID: 4496153294741504277
+      spriteID: cf868374743f39180800000000000000
+      internalID: -9109670133777274628
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      QuitProgressCircle_0: 4496153294741504277
+      S_Logo_StumbleDuck_0: -9109670133777274628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

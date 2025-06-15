@@ -1,3 +1,4 @@
+using System;
 using Labyrinth.Level;
 using UnityEngine;
 
@@ -36,5 +37,14 @@ namespace Labyrinth.Eventsystem {
         public static void InvokeHitDanger() {
             onHitDanger?.Invoke();
         }
+
+
+        public delegate void ShowGameOverScreenHandler();
+        public static event ShowGameOverScreenHandler onShowGameOverScreen;
+
+        public static void InvokeShowGameOverScreen() {
+            onShowGameOverScreen?.Invoke();
+        }
+
     }
 }

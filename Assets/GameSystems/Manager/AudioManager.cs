@@ -1,4 +1,3 @@
-using System;
 using Labyrinth.Eventsystem;
 using Labyrinth.Level;
 using UnityEngine;
@@ -12,11 +11,24 @@ public class AudioManager : MonoBehaviour {
     AudioClip hitClip;
     [SerializeField]
     AudioClip winClip;
+    [SerializeField]
+    AudioClip gameOverClip;
 
     protected void OnEnable() {
         CameraEventManager.onImpact += PlayImpactClip;
         GameStateEventManager.onGameWon += PlayWinFanfare;
         GameStateEventManager.onHitDanger += PlayHitClip;
+        GameStateEventManager.onShowGameOverScreen += PlayGameOverClip;
+    }
+    protected void OnDisable() {
+        CameraEventManager.onImpact -= PlayImpactClip;
+        GameStateEventManager.onGameWon -= PlayWinFanfare;
+        GameStateEventManager.onHitDanger -= PlayHitClip;
+        GameStateEventManager.onShowGameOverScreen -= PlayGameOverClip;
+    }
+
+    void PlayGameOverClip() {
+        audioSource.PlayOneShot(gameOverClip);
     }
 
     void PlayHitClip() {
