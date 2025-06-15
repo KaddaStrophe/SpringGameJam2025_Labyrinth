@@ -82,20 +82,23 @@ namespace Labyrinth.Character {
                 }
             } else {    // Collision with walls
                 ProcessCollisionWithWalls(collision);
-                // Bounce back
-                currentSpeed *= -1;
-                Move();
+                
             }
         }
 
         protected void OnTriggerStay2D(Collider2D collision) {
-            ProcessCollisionWithWalls(collision);
+            if (!collision.gameObject.CompareTag(goalLayer) && !collision.gameObject.CompareTag(dangerLayer)) {
+                ProcessCollisionWithWalls(collision);
+            }
         }
 
         void ProcessCollisionWithWalls(Collider2D collision) {
             var distance = attachedRigidbody.Distance(collision);
             // Remove overlap (stop at wall)
             transform.position += new Vector3(distance.normal.x, distance.normal.y, 0) * distance.distance;
+            // Bounce back
+            currentSpeed *= -1;
+            Move();
         }
 
         void TryStopping() {

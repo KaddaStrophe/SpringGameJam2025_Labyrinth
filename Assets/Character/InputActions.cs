@@ -200,7 +200,7 @@ namespace Labyrinth.Character
                     ""id"": ""845642ef-5ee4-43d6-b78e-4d101d0df324"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Hold(duration=0.3)"",
+                    ""interactions"": ""Hold(duration=0.2)"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -268,6 +268,180 @@ namespace Labyrinth.Character
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Hold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Hotkey"",
+            ""id"": ""560ed9c7-1821-4b41-aa1b-6e782c7115ff"",
+            ""actions"": [
+                {
+                    ""name"": ""Skip_1"",
+                    ""type"": ""Button"",
+                    ""id"": ""5080f561-3567-4637-84bf-ae05366cb70a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skip_2"",
+                    ""type"": ""Button"",
+                    ""id"": ""c437e2c6-5002-474c-a181-2e7fa847f88f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skip_3"",
+                    ""type"": ""Button"",
+                    ""id"": ""13460991-6f9f-4f6b-a592-97e038d20f51"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Permadeath"",
+                    ""type"": ""Button"",
+                    ""id"": ""48b0908b-7cf1-41c8-87bc-d1c7a8afff15"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MainMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""79dfc728-af47-4b9b-89ea-bc0da53cc942"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""c5840849-f3f9-4450-bdc8-db3ac7d43ff3"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""045cac29-5354-4c0b-807d-3b35d58181c7"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4faf18d0-de90-40f1-b86d-b7918773c801"",
+                    ""path"": ""<Keyboard>/f1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d97239aa-48fe-4781-8342-590fd0968382"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c03332ed-15ea-4337-9056-ddbd208ee846"",
+                    ""path"": ""<Keyboard>/f2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49f28741-2d3c-4e86-b38e-c73d9042ff5f"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9875ecb9-d53b-4ba8-bb37-547dd756a04c"",
+                    ""path"": ""<Keyboard>/f3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33675682-ed7b-4a5b-b40d-513fcefd490e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Permadeath"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99eea9bb-24d8-45a8-a501-6c3976c45ce9"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Permadeath"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8c4af95-db33-43b9-ace2-83bf404c502d"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9e5f5fe-ec22-4ca4-b1be-35b1fb128fac"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -345,12 +519,20 @@ namespace Labyrinth.Character
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Press = m_UI.FindAction("Press", throwIfNotFound: true);
             m_UI_Hold = m_UI.FindAction("Hold", throwIfNotFound: true);
+            // Hotkey
+            m_Hotkey = asset.FindActionMap("Hotkey", throwIfNotFound: true);
+            m_Hotkey_Skip_1 = m_Hotkey.FindAction("Skip_1", throwIfNotFound: true);
+            m_Hotkey_Skip_2 = m_Hotkey.FindAction("Skip_2", throwIfNotFound: true);
+            m_Hotkey_Skip_3 = m_Hotkey.FindAction("Skip_3", throwIfNotFound: true);
+            m_Hotkey_Permadeath = m_Hotkey.FindAction("Permadeath", throwIfNotFound: true);
+            m_Hotkey_MainMenu = m_Hotkey.FindAction("MainMenu", throwIfNotFound: true);
         }
 
         ~@InputActions()
         {
             UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputActions.Player.Disable() has not been called.");
             UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputActions.UI.Disable() has not been called.");
+            UnityEngine.Debug.Assert(!m_Hotkey.enabled, "This will cause a leak and performance issues, InputActions.Hotkey.Disable() has not been called.");
         }
 
         /// <summary>
@@ -636,6 +818,146 @@ namespace Labyrinth.Character
         /// Provides a new <see cref="UIActions" /> instance referencing this action map.
         /// </summary>
         public UIActions @UI => new UIActions(this);
+
+        // Hotkey
+        private readonly InputActionMap m_Hotkey;
+        private List<IHotkeyActions> m_HotkeyActionsCallbackInterfaces = new List<IHotkeyActions>();
+        private readonly InputAction m_Hotkey_Skip_1;
+        private readonly InputAction m_Hotkey_Skip_2;
+        private readonly InputAction m_Hotkey_Skip_3;
+        private readonly InputAction m_Hotkey_Permadeath;
+        private readonly InputAction m_Hotkey_MainMenu;
+        /// <summary>
+        /// Provides access to input actions defined in input action map "Hotkey".
+        /// </summary>
+        public struct HotkeyActions
+        {
+            private @InputActions m_Wrapper;
+
+            /// <summary>
+            /// Construct a new instance of the input action map wrapper class.
+            /// </summary>
+            public HotkeyActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+            /// <summary>
+            /// Provides access to the underlying input action "Hotkey/Skip_1".
+            /// </summary>
+            public InputAction @Skip_1 => m_Wrapper.m_Hotkey_Skip_1;
+            /// <summary>
+            /// Provides access to the underlying input action "Hotkey/Skip_2".
+            /// </summary>
+            public InputAction @Skip_2 => m_Wrapper.m_Hotkey_Skip_2;
+            /// <summary>
+            /// Provides access to the underlying input action "Hotkey/Skip_3".
+            /// </summary>
+            public InputAction @Skip_3 => m_Wrapper.m_Hotkey_Skip_3;
+            /// <summary>
+            /// Provides access to the underlying input action "Hotkey/Permadeath".
+            /// </summary>
+            public InputAction @Permadeath => m_Wrapper.m_Hotkey_Permadeath;
+            /// <summary>
+            /// Provides access to the underlying input action "Hotkey/MainMenu".
+            /// </summary>
+            public InputAction @MainMenu => m_Wrapper.m_Hotkey_MainMenu;
+            /// <summary>
+            /// Provides access to the underlying input action map instance.
+            /// </summary>
+            public InputActionMap Get() { return m_Wrapper.m_Hotkey; }
+            /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+            public void Enable() { Get().Enable(); }
+            /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+            public void Disable() { Get().Disable(); }
+            /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+            public bool enabled => Get().enabled;
+            /// <summary>
+            /// Implicitly converts an <see ref="HotkeyActions" /> to an <see ref="InputActionMap" /> instance.
+            /// </summary>
+            public static implicit operator InputActionMap(HotkeyActions set) { return set.Get(); }
+            /// <summary>
+            /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+            /// </summary>
+            /// <param name="instance">Callback instance.</param>
+            /// <remarks>
+            /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+            /// </remarks>
+            /// <seealso cref="HotkeyActions" />
+            public void AddCallbacks(IHotkeyActions instance)
+            {
+                if (instance == null || m_Wrapper.m_HotkeyActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_HotkeyActionsCallbackInterfaces.Add(instance);
+                @Skip_1.started += instance.OnSkip_1;
+                @Skip_1.performed += instance.OnSkip_1;
+                @Skip_1.canceled += instance.OnSkip_1;
+                @Skip_2.started += instance.OnSkip_2;
+                @Skip_2.performed += instance.OnSkip_2;
+                @Skip_2.canceled += instance.OnSkip_2;
+                @Skip_3.started += instance.OnSkip_3;
+                @Skip_3.performed += instance.OnSkip_3;
+                @Skip_3.canceled += instance.OnSkip_3;
+                @Permadeath.started += instance.OnPermadeath;
+                @Permadeath.performed += instance.OnPermadeath;
+                @Permadeath.canceled += instance.OnPermadeath;
+                @MainMenu.started += instance.OnMainMenu;
+                @MainMenu.performed += instance.OnMainMenu;
+                @MainMenu.canceled += instance.OnMainMenu;
+            }
+
+            /// <summary>
+            /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+            /// </summary>
+            /// <remarks>
+            /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+            /// </remarks>
+            /// <seealso cref="HotkeyActions" />
+            private void UnregisterCallbacks(IHotkeyActions instance)
+            {
+                @Skip_1.started -= instance.OnSkip_1;
+                @Skip_1.performed -= instance.OnSkip_1;
+                @Skip_1.canceled -= instance.OnSkip_1;
+                @Skip_2.started -= instance.OnSkip_2;
+                @Skip_2.performed -= instance.OnSkip_2;
+                @Skip_2.canceled -= instance.OnSkip_2;
+                @Skip_3.started -= instance.OnSkip_3;
+                @Skip_3.performed -= instance.OnSkip_3;
+                @Skip_3.canceled -= instance.OnSkip_3;
+                @Permadeath.started -= instance.OnPermadeath;
+                @Permadeath.performed -= instance.OnPermadeath;
+                @Permadeath.canceled -= instance.OnPermadeath;
+                @MainMenu.started -= instance.OnMainMenu;
+                @MainMenu.performed -= instance.OnMainMenu;
+                @MainMenu.canceled -= instance.OnMainMenu;
+            }
+
+            /// <summary>
+            /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="HotkeyActions.UnregisterCallbacks(IHotkeyActions)" />.
+            /// </summary>
+            /// <seealso cref="HotkeyActions.UnregisterCallbacks(IHotkeyActions)" />
+            public void RemoveCallbacks(IHotkeyActions instance)
+            {
+                if (m_Wrapper.m_HotkeyActionsCallbackInterfaces.Remove(instance))
+                    UnregisterCallbacks(instance);
+            }
+
+            /// <summary>
+            /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+            /// </summary>
+            /// <remarks>
+            /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+            /// </remarks>
+            /// <seealso cref="HotkeyActions.AddCallbacks(IHotkeyActions)" />
+            /// <seealso cref="HotkeyActions.RemoveCallbacks(IHotkeyActions)" />
+            /// <seealso cref="HotkeyActions.UnregisterCallbacks(IHotkeyActions)" />
+            public void SetCallbacks(IHotkeyActions instance)
+            {
+                foreach (var item in m_Wrapper.m_HotkeyActionsCallbackInterfaces)
+                    UnregisterCallbacks(item);
+                m_Wrapper.m_HotkeyActionsCallbackInterfaces.Clear();
+                AddCallbacks(instance);
+            }
+        }
+        /// <summary>
+        /// Provides a new <see cref="HotkeyActions" /> instance referencing this action map.
+        /// </summary>
+        public HotkeyActions @Hotkey => new HotkeyActions(this);
         private int m_KeyboardMouseSchemeIndex = -1;
         /// <summary>
         /// Provides access to the input control scheme.
@@ -744,6 +1066,49 @@ namespace Labyrinth.Character
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnHold(InputAction.CallbackContext context);
+        }
+        /// <summary>
+        /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Hotkey" which allows adding and removing callbacks.
+        /// </summary>
+        /// <seealso cref="HotkeyActions.AddCallbacks(IHotkeyActions)" />
+        /// <seealso cref="HotkeyActions.RemoveCallbacks(IHotkeyActions)" />
+        public interface IHotkeyActions
+        {
+            /// <summary>
+            /// Method invoked when associated input action "Skip_1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnSkip_1(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Skip_2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnSkip_2(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Skip_3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnSkip_3(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Permadeath" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnPermadeath(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "MainMenu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnMainMenu(InputAction.CallbackContext context);
         }
     }
 }

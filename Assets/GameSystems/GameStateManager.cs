@@ -33,6 +33,8 @@ namespace Labyrinth.GameSystem {
         }
         protected void OnEnable() {
             GameStateEventManager.onStartNextLevel += LoadNextLevel;
+            HotkeyEventManager.onSkipToLevel += SkipToLevel;
+            HotkeyEventManager.onTogglePermadeath += TogglePermadeath;
 
             if (!player) {
                 player = FindObjectsByType<CharacterMover>(FindObjectsSortMode.None).FirstOrDefault();
@@ -56,6 +58,8 @@ namespace Labyrinth.GameSystem {
 
         protected void OnDisable() {
             GameStateEventManager.onStartNextLevel -= LoadNextLevel;
+            HotkeyEventManager.onSkipToLevel -= SkipToLevel;
+            HotkeyEventManager.onTogglePermadeath -= TogglePermadeath;
         }
 
         protected void Start() {
@@ -68,7 +72,9 @@ namespace Labyrinth.GameSystem {
         }
 
         void LoadNextLevel() {
-            levels[currentLevel].HideLevel();
+            if (currentLevel >= 0) {
+                levels[currentLevel].HideLevel();
+            }
             if (currentLevel < levels.Length - 1) {
                 currentLevel++;
                 var level = levels[currentLevel];
@@ -84,7 +90,17 @@ namespace Labyrinth.GameSystem {
             winParticles.Play();
         }
 
-        internal void StartGameOver() {
+        void TogglePermadeath() {
+            isPermaDeath = !isPermaDeath;
+        }
+
+        void SkipToLevel(LevelSetup level) {
+            levels[currentLevel].HideLevel();
+            currentLevel = levels.ToList().FindIndex(l => l == level) - 1;
+            LoadNextLevel();
+        }
+
+        public void StartGameOver() {
             GameStateEventManager.InvokeGameOver(levels[currentLevel]);
         }
     }
